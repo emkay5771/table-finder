@@ -35,5 +35,5 @@ if name != "":
                 st.image("images/table-overview.jpg")
         except:
             st.write("Table not found")
-    else:
-        st.write("No tables found for this name.")
+else:
+    st.write("No tables found for this name.")
