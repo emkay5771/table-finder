@@ -1,6 +1,13 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(
+    page_title="Table Finder 🪑",
+    page_icon="🪑",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
 st.title("Table Finder 🪑")
 
 # Read the excel file once and store it in a variable
