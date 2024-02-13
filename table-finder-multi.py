@@ -1,12 +1,29 @@
 import streamlit as st
 import pandas as pd
 
+import base64
+
 st.set_page_config(
     page_title="Table Finder 🪑",
     page_icon="🪑",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="collapsed",
 )
+
+
+
+background_image=(f"""
+    <style>
+    [data-testid="stAppViewContainer"] {{
+        background-image: url("https://github.com/emkay5771/table-finder/blob/main/images/invitation.jpg?raw=true");
+        background-size: 100vw;  # This sets the size to cover 100% of the viewport width and height
+        background-position: 50%, 50%;  
+        background-repeat: space repeat;
+    }}
+    </style>
+""")
+
+st.markdown(background_image, unsafe_allow_html=True)
 
 st.title("Table Finder 🪑")
 
