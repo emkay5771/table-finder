@@ -19,6 +19,7 @@ background_image=(f"""
         background-size: 100vw;  # This sets the size to cover 100% of the viewport width and height
         background-position: 50%, 50%;  
         background-repeat: space repeat;
+        backdrop-filter: blur(5px); 
     }}
     </style>
 """)
@@ -49,7 +50,7 @@ if name != "":
                 specific, general = st.tabs([f"{entry}'s Table", "Full Table Map"])
                 with specific:
                     st.write(f"{entry} is sitting at table {n}.")
-                    st.image(f"images/table{n}.jpg")
+                    st.image(f"images/{n}.jpg")
                 with general:
                     st.image("images/table-overview.jpg")
             except:
