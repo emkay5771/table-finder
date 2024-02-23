@@ -11,7 +11,9 @@ st.set_page_config(
 )
 
 
-
+with open( "style.css" ) as css:
+    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
+    
 background_image=(f"""
     <style>
     [data-testid="stAppViewContainer"] {{
@@ -23,10 +25,20 @@ background_image=(f"""
     }}
     </style>
 """)
+st.markdown(
+    """
+<style>
+span[data-baseweb="tag"] {
+  background-color: gray !important;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
 
 st.markdown(background_image, unsafe_allow_html=True)
 
-st.title("Table Finder 🪑")
+st.title("Table Finder")
 
 # Read the excel file once and store it in a variable
 df = pd.read_excel("table-list.xlsx")
@@ -34,8 +46,9 @@ df = pd.read_excel("table-list.xlsx")
 # Get the unique names from the 'Name' column
 names = df['Name'].unique()
 
-name = st.multiselect("Type your name", names, placeholder="Select a name")
-
+name = st.multiselect("Type your name to find your table", names, placeholder="Select a name")
+with st.expander("Table Map Overview"):
+    st.image("images/table-overview.jpg")
 if name != "":
     for entry in name:
         # Find the row where 'Name' equals the selected name
@@ -47,12 +60,8 @@ if name != "":
             # Get the table number from the second column ('Table')
             n = row['Table'].values[0]
             try:
-                specific, general = st.tabs([f"{entry}'s Table", "Full Table Map"])
-                with specific:
-                    st.write(f"{entry} is sitting at table {n}.")
+                    st.header(f"*{entry}* is sitting at table {n}.", divider="gray")
                     st.image(f"images/{n}.jpg")
-                with general:
-                    st.image("images/table-overview.jpg")
             except:
                 st.write("Table not found")
 else:
