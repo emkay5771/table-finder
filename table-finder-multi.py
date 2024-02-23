@@ -19,7 +19,7 @@ background_image=(f"""
     [data-testid="stAppViewContainer"] {{
         background-image: url("https://github.com/emkay5771/table-finder/blob/main/images/background-darker-er.jpg?raw=true");
         background-size: 100vh, 100vw;  # This sets the size to cover 100% of the viewport width and height
-        background-position: 50%, 50%;  
+        background-position: center;  
         background-repeat: no-repeat;
         backdrop-filter: blur(5px); 
     }}
