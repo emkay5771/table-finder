@@ -44,8 +44,8 @@ df = pd.read_excel("table-list.xlsx")
 
 # Get the unique names from the 'Name' column
 names = df['Name'].unique()
-
-name = st.multiselect("Type your name to find your table", names, placeholder="Select a name")
+st.subheader("Type your name to find your table")
+name = st.multiselect("",names, placeholder="Select a name")
 with st.expander("Table Map Overview"):
     st.image("images/table-overview.jpg")
 if name != "":
