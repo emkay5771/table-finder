@@ -20,7 +20,7 @@ background_image=(f"""
         background-image: url("https://github.com/emkay5771/table-finder/blob/main/images/background-darker-er.jpg?raw=true");
         background-size: 100vw;  # This sets the size to cover 100% of the viewport width and height
         background-position: 50%, 50%;  
-        background-repeat: space repeat;
+        
         backdrop-filter: blur(5px); 
     }}
     </style>
