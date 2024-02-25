@@ -70,7 +70,7 @@ st.header("Type your name to find your table")
 name = st.multiselect("",names, placeholder="Select a name")
 #until a name is selected, the image will be the monogram
 if not name:
-    st.image("images/k-monogram-2.jpg")
+    st.image("images/k-monogram-2.png")
 if name != "":
     for entry in name:
         # Find the row where 'Name' equals the selected name
