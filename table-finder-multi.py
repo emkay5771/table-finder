@@ -110,6 +110,10 @@ st.markdown("""
     [data-testid="stToolbarActions"] > {
         display: none;
     }
+    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.st-emotion-cache-zq5wmm.ezrtsby0 > div
+    {
+        display: none;
+    }
 
 </style>""",
 unsafe_allow_html=True)
