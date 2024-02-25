@@ -8,6 +8,7 @@ backgroundColor="#FEFBF6"
 #secondaryBackgroundColor="#fef1cb"
 secondaryBackgroundColor="FEFBF6"
 #textColor="#ffffff"
-textColor="#000D39"
+#textColor="#000D39"
+textColor="#081B99"
 [client]
 toolbar="minimal"
