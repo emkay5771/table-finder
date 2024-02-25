@@ -8,3 +8,5 @@ backgroundColor="#feeebc"
 secondaryBackgroundColor="#fef1cb"
 #textColor="#ffffff"
 textColor="#000D39"
+[client]
+toolbar="minimal"
