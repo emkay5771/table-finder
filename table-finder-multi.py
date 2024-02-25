@@ -51,7 +51,7 @@ st.markdown(
   visibility: hidden;
 }
 footer {
-    visibility: hidden;
+    visibility: hidden !important;
     }
 #root > div:nth-child(1) > div > div > a > div {
     visibility: hidden;
