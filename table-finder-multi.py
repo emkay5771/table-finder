@@ -109,7 +109,7 @@ st.markdown("""
 	[data-testid="stDecoration"] {
 		display: none;
 	}
-    [data-testid="stToolbarActions"] {
+    [data-testid="stToolbarActions"] > button {
         display: none;
     }
 
