@@ -35,7 +35,7 @@ span[data-baseweb="tag"] {
     unsafe_allow_html=True,
 )
 
-st.markdown(background_image, unsafe_allow_html=True)
+#st.markdown(background_image, unsafe_allow_html=True)
 
 st.title("Table Finder")
 

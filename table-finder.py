@@ -7,6 +7,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
 )
+with open( "style.css" ) as css:
+    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 st.title("Table Finder 🪑")
 
@@ -30,7 +32,7 @@ if name != "":
             st.write(f"Your table is table {n}")
             specific, general = st.tabs(["Specific", "General"])
             with specific:
-                st.image(f"images/table{n}.jpg")
+                st.image(f"images/{n}.jpg")
             with general:
                 st.image("images/table-overview.jpg")
         except:
