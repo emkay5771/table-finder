@@ -36,9 +36,17 @@ span[data-baseweb="tag"] {
 )
 
 #st.markdown(background_image, unsafe_allow_html=True)
-
+st.markdown(
+    """
+    <style>
+    div[data-testid="stExpander"] details summary p{
+    font-size: 1.5rem;
+}
+</style>
+    """, unsafe_allow_html=True)
 st.title("Table Finder")
-
+with st.expander("Table Map Overview"):
+    st.image("images/table-overview.jpg")
 # Read the excel file once and store it in a variable
 df = pd.read_excel("table-list.xlsx")
 
@@ -46,8 +54,6 @@ df = pd.read_excel("table-list.xlsx")
 names = df['Name'].unique()
 st.subheader("Type your name to find your table")
 name = st.multiselect("",names, placeholder="Select a name")
-with st.expander("Table Map Overview"):
-    st.image("images/table-overview.jpg")
 if name != "":
     for entry in name:
         # Find the row where 'Name' equals the selected name
