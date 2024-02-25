@@ -17,7 +17,7 @@ with open( "style.css" ) as css:
 background_image=(f"""
     <style>
     [data-testid="stAppViewContainer"] {{
-        background-image: url("https://github.com/emkay5771/table-finder/blob/main/images/background-darker-er.jpg?raw=true");
+        background-image: url("https://github.com/emkay5771/table-finder/blob/main/images/k-monogram.jpg?raw=true");
         background-size: 100vw !important;  # This sets the size to cover 100% of the viewport width and height 
         background-repeat: space repeat-y;
         backdrop-filter: blur(5px); 
@@ -35,7 +35,7 @@ span[data-baseweb="tag"] {
     unsafe_allow_html=True,
 )
 
-#st.markdown(background_image, unsafe_allow_html=True)
+st.markdown(background_image, unsafe_allow_html=True)
 st.markdown(
     """
     <style>
