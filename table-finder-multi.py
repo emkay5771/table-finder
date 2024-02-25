@@ -8,6 +8,10 @@ st.set_page_config(
     page_icon="🪑",
     layout="centered",
     initial_sidebar_state="collapsed",
+    menu_items={
+        "Report a bug": None,
+        'About': "Table Finder 🪑: A small utility to allow guests to find their table at an event. To contact the developer of this app, email them [here.](mailto:mkievman@outlook.com)",
+    },
 )
 
 st.title("Table Finder")
