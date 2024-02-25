@@ -109,6 +109,10 @@ st.markdown("""
 	[data-testid="stDecoration"] {
 		display: none;
 	}
+    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.st-emotion-cache-zq5wmm.ezrtsby0 > div > div:nth-child(1)
+    {
+        display: none;
+    }
 
 </style>""",
 unsafe_allow_html=True)
