@@ -109,9 +109,7 @@ st.markdown("""
 	[data-testid="stDecoration"] {
 		display: none;
 	}
-    [data-testid="stToolbarActions"] > button {
-        display: none;
-    }
+    
 
 </style>""",
 unsafe_allow_html=True)
