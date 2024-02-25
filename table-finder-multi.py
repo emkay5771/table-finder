@@ -35,7 +35,7 @@ span[data-baseweb="tag"] {
     unsafe_allow_html=True,
 )
 
-st.markdown(background_image, unsafe_allow_html=True)
+#st.markdown(background_image, unsafe_allow_html=True)
 st.markdown(
     """
     <style>
@@ -68,6 +68,9 @@ df = pd.read_excel("table-list.xlsx")
 names = df['Name'].unique()
 st.subheader("Type your name to find your table")
 name = st.multiselect("",names, placeholder="Select a name")
+#until a name is selected, the image will be the monogram
+if not name:
+    st.image("images/k-monogram.jpg")
 if name != "":
     for entry in name:
         # Find the row where 'Name' equals the selected name
