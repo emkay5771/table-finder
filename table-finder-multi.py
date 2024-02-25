@@ -20,8 +20,8 @@ df = pd.read_excel("table-list.xlsx")
 
 # Get the unique names from the 'Name' column
 names = df['Name'].unique()
-st.header("Type your name to find your table")
-name = st.multiselect("",names, placeholder="Select a name")
+st.header("Search for your name below:")
+name = st.multiselect("",names, placeholder="Type in a name")
 #until a name is selected, the image will be the monogram
 if not name:
     st.image("images/k-monogram-2.png")
