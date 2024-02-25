@@ -53,6 +53,9 @@ st.markdown(
 footer {
     visibility: hidden;
     }
+#root > div:nth-child(1) > div > div > a > div {
+    visibility: hidden;
+    }   
     </style>
     """, unsafe_allow_html=True)
 st.title("Table Finder")
