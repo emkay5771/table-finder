@@ -109,7 +109,9 @@ st.markdown("""
 	[data-testid="stDecoration"] {
 		display: none;
 	}
-    
+    [data-testid="baseButton-header"] {
+        display: none;
+    }
 
 </style>""",
 unsafe_allow_html=True)
