@@ -80,9 +80,7 @@ st.markdown(
 st.markdown(
     """
     <style>
-    #MainMenu {
-  visibility: hidden;
-}
+
 footer {
     visibility: hidden !important;
     }
