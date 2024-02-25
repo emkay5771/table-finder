@@ -18,7 +18,7 @@ background_image=(f"""
     <style>
     [data-testid="stAppViewContainer"] {{
         background-image: url("https://github.com/emkay5771/table-finder/blob/main/images/k-monogram.jpg?raw=true");
-        background-size: 100vw 100vh !important;  # This sets the size to cover 100% of the viewport width and height 
+        background-size: 100vh !important;  # This sets the size to cover 100% of the viewport width and height 
         background-repeat: none !important;  # This ensures that the image is only shown once
         backdrop-filter: blur(5px); 
     }}
