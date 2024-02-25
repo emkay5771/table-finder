@@ -44,6 +44,14 @@ st.markdown(
 }
 </style>
     """, unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    #MainMenu {
+  visibility: hidden;
+}
+    </style>
+    """, unsafe_allow_html=True)
 st.title("Table Finder")
 with st.expander("Table Map Overview"):
     st.image("images/table-overview.jpg")
