@@ -40,7 +40,7 @@ if name != "":
             # Get the table number from the second column ('Table')
             n = row['Table'].values[0]
             try:
-                    st.header(f"*{entry}* is sitting at table {n}.", divider="gray")
+                    st.header(f"*{entry.strip()}* is sitting at table {n}.", divider="gray")
                     st.image(f"images/{n}.jpg")
             except:
                 st.write("Table not found")
