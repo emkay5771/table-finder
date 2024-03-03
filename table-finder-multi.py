@@ -20,7 +20,7 @@ st.title("Table Finder")
 with st.expander("Table Map Overview"):
     st.image("images/table-overview.jpg")
 # Read the excel file once and store it in a variable
-df = pd.read_excel("table-list.xlsx")
+df = pd.read_excel("Sorted Seating.xlsx")
 
 # Get the unique names from the 'Name' column
 names = df['Name'].unique()
