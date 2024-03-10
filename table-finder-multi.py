@@ -29,10 +29,10 @@ df = pd.read_excel("Sorted Seating.xlsx")
 names = df['Name'].unique()
 
 # Create placeholders for each possible result
-placeholder = st.empty()
-with st.container():
-    placeholder_header = {name: st.empty() for name in names}
-    placeholder_image = {name: st.empty() for name in names}
+#placeholder = st.empty()
+#with st.container():
+    #placeholder_header = {name: st.empty() for name in names}
+    #placeholder_image = {name: st.empty() for name in names}
 
 st.header("Search for your name below:")
 name = st.multiselect("", names, placeholder="Type in a name")
