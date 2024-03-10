@@ -46,7 +46,7 @@ if not name:
 else:
     # For each selected name, update the corresponding placeholder
     for entry in name:
-        container = st.container()
+        #container = st.container()
 
         row = df[df['Name'] == entry]
         if not row.empty:
