@@ -51,6 +51,7 @@ else:
         row = df[df['Name'] == entry]
         if not row.empty:
             n = row['Table'].values[0]
+            n = int(n)
             try:
                 #with container:
                     #with placeholder.container():
