@@ -14,38 +14,53 @@ st.set_page_config(
     },
 )
 
+import streamlit as st
+import pandas as pd
+
+
 st.title("Table Finder")
-
-
-with st.expander("Table Map Overview"):
+# Your existing setup code...
+with st.expander("Table Map Overview", expanded=True):
     st.image("images/table-overview.jpg")
 # Read the excel file once and store it in a variable
 df = pd.read_excel("Sorted Seating.xlsx")
 
 # Get the unique names from the 'Name' column
 names = df['Name'].unique()
+
+# Create placeholders for each possible result
+placeholder = st.empty()
+with st.container():
+    placeholder_header = {name: st.empty() for name in names}
+    placeholder_image = {name: st.empty() for name in names}
+
 st.header("Search for your name below:")
-name = st.multiselect("",names, placeholder="Type in a name")
-#until a name is selected, the image will be the monogram
+name = st.multiselect("", names, placeholder="Type in a name")
+
+# Display the header
+
+
+# Display the image if no name is selected
 if not name:
     st.image("images/k-monogram-2.png")
-if name != "":
+else:
+    # For each selected name, update the corresponding placeholder
     for entry in name:
-        # Find the row where 'Name' equals the selected name
+        container = st.container()
+
         row = df[df['Name'] == entry]
-        #row = df[df['Name'] == name]
-        
-        # Check if such a row exists
         if not row.empty:
-            # Get the table number from the second column ('Table')
             n = row['Table'].values[0]
             try:
-                    st.header(f"*{entry.strip()}* is sitting at table {n}.", divider="gray")
-                    st.image(f"images/{n}.jpg")
+                #with container:
+                    #with placeholder.container():
+                st.header(f"*{entry.strip()}* is sitting at table {n}.", divider="gray")
+                st.image(f"images/{n}.jpg")
             except:
                 st.write("Table not found")
-else:
-    st.write("No tables found for this name.")
+    if len(name) == 0:
+        st.write("No tables found for this name.")
+
 
 
 with open( "style.css" ) as css:
